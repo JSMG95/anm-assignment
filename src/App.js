@@ -19,6 +19,8 @@ class App extends Component {
     this.setState({errorMessage: message})
   }
 
+
+  //Highlight the seleced marker in the top ten table.
   setHighlightedRow = (marker) => {
     console.log(marker);
     let topTenEarthquakes = [...this.state.topTenEarthquakes];
@@ -29,6 +31,7 @@ class App extends Component {
     this.setState({topTenEarthquakes});
   }
 
+  
   setCityRectangleBounds = (bounds) => {
     this.setState({inputCityRectangleBounds: bounds});
     this.fetchEarthquakesInfo();
@@ -63,7 +66,7 @@ class App extends Component {
     let today = `${year}-${month}-${day}`
     
     //Use max value in lat and lng in order to return the whole globe, also use max results permitted by Geonames
-    fetch(`http://api.geonames.org/earthquakesJSON?north=90&south=-90&east=180&west=-180&maxRows=500&minMagnitude=2&datetime=${today}&username=jsmg`)
+    fetch(`https://api.geonames.org/earthquakesJSON?north=90&south=-90&east=180&west=-180&maxRows=500&minMagnitude=2&datetime=${today}&username=jsmg`)
     .then(response => {
       return response.json();
     })

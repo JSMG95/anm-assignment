@@ -2,7 +2,7 @@
   "name": "anm-assignment",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jsmg95.github.io/anm-assignment",
+  "homepage": "https://jsmg95.github.io/anm-assignment",
   "dependencies": {
     "google-maps-react": "^2.0.2",
     "react": "^16.6.3",
